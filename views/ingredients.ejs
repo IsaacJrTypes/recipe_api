@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/recipe" method="GET">
+        <label for="site-search">Search for Recipes:</label>
+        <input type="search" id="site-search" name="query" />
+    </form>
+    <button onclick="console.log('clicked')">Search</button>
+
+   <%if (ingredientArr) { %>
+    <h1> Ingredients in <%=recipeTitle %></h1>
+    <table>
+        <tr>
+            <th>Ingredient</th>
+            <th>Amount</th>
+            <th>Unit</th>
+            <th>Aisle</th>
+        </tr>
+        <%for (let key in ingredientArr) { %>
+            <tr>
+                <td><%= ingredientArr[key].nameClean %></td>
+                <td><%= ingredientArr[key].amount %></t>
+                <td><%= ingredientArr[key].unit %></td>
+                <td><%= ingredientArr[key].aisle %></td>
+            </tr>
+            <% } %>
+    </table>
+    <h2>Instructions</h2>
+    <p><%= instructions %></p>
+
+    <% } %>
+    
+</body>
+</html>

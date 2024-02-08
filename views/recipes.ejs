@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/recipe" method="GET">
+        <label for="site-search">Search for Recipes:</label>
+        <input type="search" id="site-search" name="query" />
+    </form>
+    <button >Search</button>
+
+    
+    <% if(locals.recipeArr) {   %>
+        <ul>
+          <%  for(const key in recipeArr) { %>
+          <li>  <%-  recipeArr[key] %></li>
+          <% } %>
+        </ul>
+   <% } %>
+
+    
+</body>
+</html>
