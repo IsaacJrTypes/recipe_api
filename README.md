@@ -21,4 +21,14 @@ Technologies: Express.js, Axios and EJS
 - The server uses [Express](https://www.npmjs.com/package/express) to handle site routing.
 - Any errors relating to node version incompatibility, ensure to switch to **node version 20.11.0** using [nvm](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) or [fnm](https://www.freecodecamp.org/news/fnm-fast-node-manager/)
 - Use `npx nodemon index.js` to initiate [nodemon](https://www.npmjs.com/package/nodemon) for server development. Use **ctrl + c** to terminate nodemon execution. 
+- To get Spoonacular API credentials, register at [RapidAPI](https://rapidapi.com/hub). You can register to multiple API's in one central place. Once you subscribe to Spoonacular API: 
+    - Create a new file named `apiCred.js`
+    - Export the object with your credentials:
+    ``` 
+    export const APICredentials = {
+    'X-RapidAPI-Key': KEY STRING HERE ,
+    'X-RapidAPI-Host': STRING URL HERE
+    };
+    ```
+
 
